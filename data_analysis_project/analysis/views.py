@@ -23,7 +23,7 @@ def upload_file(request):
             # Perform data analysis here
             summary_stats = data.describe().to_html()
             first_rows = data.head().to_html()
-            missing_values = data.isnull().sum().to_html()
+            missing_values = data.isnull().sum().to_frame(name='Missing Values').to_html()
 
             # Generate visualizations
             sns.set(style="darkgrid")
