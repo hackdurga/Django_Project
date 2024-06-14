@@ -96,3 +96,12 @@ This Django-based web application allows users to upload CSV files, perform data
 7. **Access the application**:
 
    Open your browser and go to `http://127.0.0.1:8000/analysis/`
+
+## Usage
+1. **Upload a CSV File**:
+   - Navigate to the upload page.
+   - Select a CSV file and click the upload button.
+
+3. **View Analysis Results**:
+   - The application will display the first few rows of the data, summary statistics, and missing values.
+   - Histograms for numerical columns will be generated and displayed.
