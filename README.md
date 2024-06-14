@@ -105,3 +105,30 @@ This Django-based web application allows users to upload CSV files, perform data
 3. **View Analysis Results**:
    - The application will display the first few rows of the data, summary statistics, and missing values.
    - Histograms for numerical columns will be generated and displayed.
+  
+## Sample CSV File
+
+### A sample CSV file candy-data.csv is provided in the root directory for testing purposes.
+
+## Example
+
+### Here’s an example of how to upload a CSV file and view the results:
+
+1. **Navigate to the upload page**.
+2. **Select the sample_data.csv file**.
+3. **Click the upload button**.
+4. **View the analysis results and visualizations.**
+
+## Troubleshooting
+
+### If you encounter any issues, ensure that:
+
+- The media directory exists and is writable.
+- The file paths in settings.py are configured correctly:
+     ```sh
+     MEDIA_URL = '/media/'
+     MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+     
+## Acknowledgements
+
+- [Pandas](https://www.djangoproject.com/)
