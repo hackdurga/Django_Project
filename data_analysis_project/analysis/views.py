@@ -1,12 +1,13 @@
 import os
 import pandas as pd
-from django.shortcuts import render
-from .forms import UploadFileForm
 import matplotlib.pyplot as plt
 import seaborn as sns
+from django.shortcuts import render
+from django.conf import settings
+from .forms import UploadFileForm
 
 def handle_uploaded_file(file):
-    file_path = os.path.join('media', file.name)
+    file_path = os.path.join(settings.MEDIA_ROOT, file.name)
     with open(file_path, 'wb+') as destination:
         for chunk in file.chunks():
             destination.write(chunk)
@@ -28,8 +29,8 @@ def upload_file(request):
             sns.set(style="darkgrid")
             fig, ax = plt.subplots()
             data.hist(ax=ax)
-            fig.savefig('media/histogram.png')
-            
+            fig.savefig(os.path.join(settings.MEDIA_ROOT, 'histogram.png'))
+
             return render(request, 'analysis/results.html', {
                 'summary_stats': summary_stats,
                 'first_rows': first_rows,
