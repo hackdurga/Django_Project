@@ -16,12 +16,16 @@ def upload_file(request):
         if form.is_valid():
             file_path = handle_uploaded_file(request.FILES['file'])
             data = pd.read_csv(file_path)
+
             # Perform data analysis here
             summary_stats = data.describe().to_html()
             first_rows = data.head().to_html()
+            missing_values = data.isnull().sum().to_html()
+
             return render(request, 'analysis/results.html', {
                 'summary_stats': summary_stats,
                 'first_rows': first_rows,
+                'missing_values': missing_values,
             })
     else:
         form = UploadFileForm()
