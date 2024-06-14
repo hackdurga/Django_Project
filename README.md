@@ -131,4 +131,17 @@ This Django-based web application allows users to upload CSV files, perform data
      
 ## Acknowledgements
 
-- [Pandas](https://www.djangoproject.com/)
+- [Django](https://www.djangoproject.com/)
+- [Pandas](https://pandas.pydata.org/)
+- [Matplotlib](https://matplotlib.org/)
+- [Seaborn](https://seaborn.pydata.org/)
+
+
+### Notes
+
+1. Replace the `git clone` URL with the actual URL of your repository.
+2. Customize any sections as needed based on your project specifics.
+3. Ensure you have a sample CSV file named `sample_data.csv` in your project root directory if referenced in the `README.md`.
+
+This `README.md` file provides a comprehensive guide for setting up and using your Django-based data analysis application.
+
