@@ -17,6 +17,7 @@ This Django-based web application allows users to upload CSV files, perform data
    - Displays the data analysis results and visualizations in a clear and organized manner.
 
 ## Project Structure
+```bash
   data_analysis_project/
 │
 ├── analysis/
@@ -45,3 +46,4 @@ This Django-based web application allows users to upload CSV files, perform data
 │
 ├── manage.py
 └── requirements.txt
+```
