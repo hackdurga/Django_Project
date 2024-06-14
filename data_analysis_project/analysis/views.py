@@ -2,6 +2,8 @@ import os
 import pandas as pd
 from django.shortcuts import render
 from .forms import UploadFileForm
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 def handle_uploaded_file(file):
     file_path = os.path.join('media', file.name)
@@ -22,10 +24,17 @@ def upload_file(request):
             first_rows = data.head().to_html()
             missing_values = data.isnull().sum().to_html()
 
+            # Generate visualizations
+            sns.set(style="darkgrid")
+            fig, ax = plt.subplots()
+            data.hist(ax=ax)
+            fig.savefig('media/histogram.png')
+            
             return render(request, 'analysis/results.html', {
                 'summary_stats': summary_stats,
                 'first_rows': first_rows,
                 'missing_values': missing_values,
+                'histogram': 'media/histogram.png',
             })
     else:
         form = UploadFileForm()
