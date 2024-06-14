@@ -18,34 +18,36 @@ This Django-based web application allows users to upload CSV files, perform data
 
 ## Project Structure
 ```bash
-  data_analysis_project/
+data_analysis_project/
 │
 ├── analysis/
-│ ├── migrations/
-│ ├── templates/
-│ │ └── analysis/
-│ │ ├── upload.html
-│ │ └── results.html
-│ ├── init.py
-│ ├── admin.py
-│ ├── apps.py
-│ ├── forms.py
-│ ├── models.py
-│ ├── tests.py
-│ ├── urls.py
-│ └── views.py
+│   ├── migrations/
+│   ├── templates/
+│   │   ├── analysis/
+│   │   │   ├── upload.html
+│   │   │   └── results.html
+│   │   ├── base.html
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── forms.py
+│   ├── models.py
+│   ├── tests.py
+│   ├── urls.py
+│   └── views.py
 │
 ├── data_analysis_project/
-│ ├── init.py
-│ ├── asgi.py
-│ ├── settings.py
-│ ├── urls.py
-│ └── wsgi.py
+│   ├── __init__.py
+│   ├── asgi.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
 │
 ├── media/
 │
 ├── manage.py
 └── requirements.txt
+
 ```
 
 
